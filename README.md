@@ -2,7 +2,7 @@
 
 **中文 readme** [README_CN.md](README_CN.md)
 
-# Functionality
+# Description
 A watermark that can be moved on videos, used for copyright protection.
 
 # Background

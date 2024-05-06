@@ -2,7 +2,7 @@
 
 **English readme** [README.md](README.md)
 
-# 功能
+# 描述
 可以在视频上移动的水印，用于版权维护。
 
 # 背景
