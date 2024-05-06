@@ -1,4 +1,4 @@
-#  video_move_watermark
+#  video_dynamic_watermark
 
 **English readme** [README.md](README.md)
 

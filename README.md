@@ -1,4 +1,4 @@
-#  video_move_watermark
+#  video_dynamic_watermark
 
 **中文 readme** [README_CN.md](README_CN.md)
 
