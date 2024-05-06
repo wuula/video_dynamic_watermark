@@ -14,7 +14,7 @@ The functionality is quite simple. There are two types of watermarks: one moves 
 # Usage
 My Python version is 3.10, theoretically 3.6 or above is acceptable
 
-Open `video_move_watermark.py` and replace the configurations below with your own preferences:
+Open video_dynamic_watermark.py and replace the configurations below with your own preferences:
 
 ```
 # Define watermark text and font
@@ -33,7 +33,7 @@ Then execute the command:
 
 ```
 pip install -r requirements.txt 
-python video_move_watermark.py
+python video_dynamic_watermark.py
 ```
 
 # Effect

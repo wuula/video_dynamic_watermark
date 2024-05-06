@@ -15,7 +15,7 @@
 # 用法
 我的python版本为：3.10，理论上3.6以上都可以
 
-打开video_move_watermark.py，将下方的配置替换成你自己需要的就行
+打开 video_dynamic_watermark.py，将下方的配置替换成你自己需要的就行
 
 ```
 # 定义水印文本和字体
@@ -34,7 +34,7 @@ output_folder = "2/"  # 输出文件夹
 
 ```
 pip install -r requirements.txt 
-python video_move_watermark.py
+python video_dynamic_watermark.py
 ```
 
 
