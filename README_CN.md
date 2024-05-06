@@ -33,6 +33,7 @@ output_folder = "2/"  # 输出文件夹
 然后执行命令
 
 ```
+pip install -r requirements.txt 
 python video_move_watermark.py
 ```
 

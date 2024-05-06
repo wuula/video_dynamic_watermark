@@ -32,6 +32,7 @@ output_folder = "2/" # Output folder
 Then execute the command:
 
 ```
+pip install -r requirements.txt 
 python video_move_watermark.py
 ```
 
