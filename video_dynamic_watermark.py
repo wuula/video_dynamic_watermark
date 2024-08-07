@@ -3,12 +3,13 @@ from PIL import Image, ImageDraw, ImageFont
 import numpy as np
 import os
 import random
+import subprocess
 
 # 定义水印文本和字体
-text1 = "舒克舒克开飞机的舒克"  # 上方水印
-text2 = "贝塔贝塔开坦克的贝塔"  # 下方水印
+text1 = "xxxxxx"  # 上方水印
+text2 = "xxxxxx"  # 下方水印
 font_path = "font/Arial Unicode.ttf"  # 请替换为你的字体文件路径
-font_size = 36  # 文字大小
+font_size = 40  # 文字大小
 font_color = (255, 255, 255)  # 白色
 
 # 输入和输出文件夹路径
@@ -36,7 +37,7 @@ for filename in os.listdir(input_folder):
 
         # 创建视频写入对象
         fourcc = cv2.VideoWriter_fourcc(*'mp4v')
-        out = cv2.VideoWriter(output_video_path, fourcc, fps, (width, height))
+        out = cv2.VideoWriter("temp.mp4", fourcc, fps, (width, height))
 
         # 创建Pillow的ImageFont对象
         font = ImageFont.truetype(font_path, font_size)
@@ -99,5 +100,12 @@ for filename in os.listdir(input_folder):
         # 释放资源
         cap.release()
         out.release()
-
+        # 将原视频音频合并到新的视频
+        # 如果不需要音频，就注释掉下面的
+        ffmpeg_command = (
+                    f"ffmpeg -y -loglevel error -i temp.mp4 -i {input_video_path} "
+                    f"-map 0:v -map 1:a -c:v libx264 -crf 20  -c:a copy {output_video_path}"
+                )
+        subprocess.run(ffmpeg_command, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        os.remove("temp.mp4")
 print("全部视频处理完成！")
